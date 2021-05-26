@@ -1,0 +1,64 @@
+body {
+  background-color: rgb(255,218,185);
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1.2em;
+}
+
+.lista {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.lista ol {
+  list-style: none;
+  counter-reset: any-name;
+}
+
+.lista li {
+  margin-bottom: 5px;
+  margin-left: 10px;
+  counter-increment: any-name;
+}
+
+.lista li:before {
+  content: counter(any-name);
+  margin-right: 0.8rem;
+  background: turquoise;
+  border-radius: 50%;
+  color: white;
+  width: 2rem;
+  height: 2rem;
+  padding-top: 0.4rem;
+  text-align: center;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+.lista input[type=submit] {
+    background: #006699;
+    color: #ffffff;
+    font-size: 1.5em;
+    cursor: pointer;
+    margin-left: 40px;
+}
+
+.lista input[type="submit"].btn:hover {
+    border: 1px solid black;
+    letter-spacing: 4px;
+}
+
+.lista input[type=file] {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+.lista input[name="logoutbutton"] {
+    margin-top: 25px;
+}
+

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTTP File Server</title>
+	<link rel="stylesheet" href="/static/style.css" type="text/css"/>
+</head>
+<body>
+	<div style="background-color: #082767; text-align: center; font-size: 2em;">
+		<h1 style="color: white">HTTP File Server</h1>
+	</div>
+	<div class="lista">
+	<h1>Ficheiros Disponiveis (Admin)</h1>
+	<ol>{% for file in files %}
+		<li>
+			<span>
+				<a href="{{ url_for('download', filename=file) }}">
+					{{ file }}
+				</a>
+			</span>
+		</li>
+	{% endfor %}
+	</ol>
+	<form action="/upload" method="POST" enctype="multipart/form-data">
+		<input type="file" name="file">
+		<input type="submit" name="uploadbutton" value="Upload">
+	</form>
+	<form action="/logout" method="POST">
+		<input type="submit" name="logoutbutton" value="Logout"/>
+	</form>
+</div>
+</body>
+</html>
+
